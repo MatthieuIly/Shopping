@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
+            $table->boolean('is_panier')->default(false);
             $table->timestamps();
         });
     }

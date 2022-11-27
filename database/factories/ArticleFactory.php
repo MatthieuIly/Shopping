@@ -20,8 +20,11 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \FakerRestaurant\Provider\fr_FR\Restaurant($faker));
         return [
-            'nom' => $this->faker->sentence
+            'nom' => $faker->fruitName(),
+            'is_panier' => false
         ];
     }
 }
