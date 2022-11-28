@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShoppingController;
+use App\Http\Controllers\TailwindcssController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ use App\Http\Controllers\ShoppingController;
 
 Route::get('/', [ShoppingController::class, 'liste'])->name('shopping');
 Route::post('add', [ShoppingController::class, 'add'])->name('shopping.add');
+
+Route::get('/tailwindcss', [TailwindcssController::class, 'index'])->name('tailwindcss.index');
