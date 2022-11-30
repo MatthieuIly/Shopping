@@ -21,5 +21,7 @@ use App\Http\Controllers\TailwindcssController;
 
 Route::get('/', [ShoppingController::class, 'liste'])->name('shopping');
 Route::post('add', [ShoppingController::class, 'add'])->name('shopping.add');
+Route::put('update/{article}', [ShoppingController::class, 'update'])->name('shopping.update');
+Route::delete('delete/{article}', [ShoppingController::class, 'delete'])->name('shopping.delete');
 
 Route::get('/tailwindcss', [TailwindcssController::class, 'index'])->name('tailwindcss.index');
