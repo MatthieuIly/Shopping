@@ -33,7 +33,7 @@ services:
                 - TZ=${TIMEZONE}
         container_name: php-fpm-8.1
         ports:
-            - 9000
+            - 5173:5173
         volumes:
             - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
         networks:

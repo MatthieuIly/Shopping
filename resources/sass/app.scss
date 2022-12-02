@@ -1,0 +1,43 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import 'bootstrap/scss/bootstrap';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+    @apply border shadow-inner mx-4 text-gray-700;
+}
+
+.input:focus {
+    @apply shadow-none
+}
+
+.btn {
+    @apply bg-blue-500 text-white px-4 py-2 rounded 
+}
+
+.btn:hover {
+    @apply bg-blue-600
+}
+
+.login-card {
+    @apply bg-white shadow-lg max-w-lg md:flex
+}
+
+.card-text {
+    flex-grow: 2;
+}
+
+.card-button {
+    flex-grow: 1;
+}
+
+.grid-form-article {
+    grid-template-columns: 2fr 1fr;
+}

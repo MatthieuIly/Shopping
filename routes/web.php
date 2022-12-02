@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShoppingController;
+use App\Http\Controllers\TailwindcssController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [ShoppingController::class, 'liste'])->name('shopping');
+Route::post('add', [ShoppingController::class, 'add'])->name('shopping.add');
+Route::put('update/{article}', [ShoppingController::class, 'update'])->name('shopping.update');
+Route::delete('delete/{article}', [ShoppingController::class, 'delete'])->name('shopping.delete');
+
+Route::get('/tailwindcss', [TailwindcssController::class, 'index'])->name('tailwindcss.index');
