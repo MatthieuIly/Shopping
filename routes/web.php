@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BooksController;
 use App\Http\Controllers\ShoppingController;
 use App\Http\Controllers\TailwindcssController;
 
@@ -25,3 +26,6 @@ Route::put('update/{article}', [ShoppingController::class, 'update'])->name('sho
 Route::delete('delete/{article}', [ShoppingController::class, 'delete'])->name('shopping.delete');
 
 Route::get('/tailwindcss', [TailwindcssController::class, 'index'])->name('tailwindcss.index');
+
+Route::post('/books', [BooksController::class, 'store']);
+Route::patch('/books/{book}', [BooksController::class, 'update']);
