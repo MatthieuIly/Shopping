@@ -29,3 +29,4 @@ Route::get('/tailwindcss', [TailwindcssController::class, 'index'])->name('tailw
 
 Route::post('/books', [BooksController::class, 'store']);
 Route::patch('/books/{book}', [BooksController::class, 'update']);
+Route::delete('/books/{book}', [BooksController::class, 'delete']);

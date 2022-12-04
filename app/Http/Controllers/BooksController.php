@@ -15,6 +15,14 @@ class BooksController extends Controller
     public function update(Book $book) 
     {
        $book->update($this->validateRequest());
+       return redirect('/books/' . $book->id);
+    }
+
+    public function delete(Book $book) 
+    {
+       $book->delete($this->validateRequest());
+
+       return redirect('/books');
     }
 
     /**
