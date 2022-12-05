@@ -98,7 +98,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-alias p="phpunit"
+alias pu="clear && php ./vendor/bin/phpunit"
 
 alias pf='clear && php ./vendor/bin/phpunit --filter'
 
