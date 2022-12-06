@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import path from 'path'
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
     plugins: [
@@ -11,14 +11,18 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
+        }),
     ],
-    server: {
-        host: '0.0.0.0',
-        hmr: {
-          host: 'localhost'
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler.js',
         },
-        watch: {
-            usePolling: true
-        }
-    }
+    },
 });
