@@ -20,9 +20,18 @@ export default defineConfig({
             },
         }),
     ],
+    server: {
+        host: '0.0.0.0',
+        hmr: {
+          host: 'localhost'
+        }
+    },
     resolve: {
         alias: {
             vue: 'vue/dist/vue.esm-bundler.js',
         },
+        watch: {
+            usePolling: true
+        }
     },
 });
